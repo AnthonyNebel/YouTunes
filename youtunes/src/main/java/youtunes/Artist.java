@@ -40,6 +40,7 @@ public class Artist {
 	public String getFirstName() {
 		return firstName;
 	}
+	@Override
 	public String toString() {
 		
 		return String.format("Artist{artistId=%s, lastName=%s, firstName=%s}", artistId, lastName, firstName);

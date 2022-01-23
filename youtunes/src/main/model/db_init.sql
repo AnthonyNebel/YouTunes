@@ -46,20 +46,33 @@ INSERT INTO artist(last_name, first_name)
 	
 INSERT INTO artist(last_name, first_name)
 	VALUES('Lewis', 'Leona');
+	
+INSERT INTO artist(last_name, first_name)
+	VALUES('Swift', 'Taylor');
 
 
 
+
 INSERT INTO album(title, price, genre, img_url, artist_id)
-	VALUES('Teenage Dream', 19.99, 'Pop', '', (SELECT artist_id FROM artist WHERE last_name = 'Perry'));
+	VALUES('Teenage Dream', 19.99, 'Pop', '../images/katyPerryAlbumCover.jpg', (SELECT artist_id FROM artist WHERE last_name = 'Perry'));
 	
 INSERT INTO album(title, price, genre, img_url, artist_id)
-	VALUES('The Fame', 21.99, 'Pop', '', (SELECT artist_id FROM artist WHERE last_name = 'Gaga'));
+	VALUES('The Fame', 21.99, 'Pop', '../images/ladyGagaAlbumCover.jpg', (SELECT artist_id FROM artist WHERE last_name = 'Gaga'));
 	
 INSERT INTO album(title, price, genre, img_url, artist_id)
-	VALUES('As I Am', 20.99, 'Pop', '', (SELECT artist_id FROM artist WHERE last_name = 'Keys'));
+	VALUES('As I Am', 20.99, 'Pop', '../images/aliciaKeyAlbumCover.jpg', (SELECT artist_id FROM artist WHERE last_name = 'Keys'));
 	
 INSERT INTO album(title, price, genre, img_url, artist_id)
-	VALUES('Title', 18.99, 'Pop', '', (SELECT artist_id FROM artist WHERE last_name = 'Trainor'));
+	VALUES('Title', 18.99, 'Pop', '../images/meghanTrainorAlbumCover.jpg', (SELECT artist_id FROM artist WHERE last_name = 'Trainor'));
 	
 INSERT INTO album(title, price, genre, img_url, artist_id)
-	VALUES('Spirit', 22.99, 'Pop', '', (SELECT artist_id FROM artist WHERE last_name = 'Lewis'));
+	VALUES('Spirit', 22.99, 'Pop', '../images/LeonaLewisAlbumCover.jpg', (SELECT artist_id FROM artist WHERE last_name = 'Lewis'));
+	
+INSERT INTO album(title, price, genre, img_url, artist_id)
+	VALUES('1989', 23.99, 'Pop', '../images/taylorSwiftAlbumCover.jpg', (SELECT artist_id FROM artist WHERE last_name = 'Swift'));
+	
+	
+	
+	
+	
+	

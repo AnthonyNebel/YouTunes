@@ -10,8 +10,8 @@
     <title>About YouTunes!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="/youtunes/assets/css/footer-basic.css">
-    <link rel="stylesheet" href="/youtunes/assets/css/styles.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer-basic.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/styles.css" type="text/css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         </div>
         <div class="row">
             <div class="col-4">
-            	<img src="/youtunes/images/test.jpeg">
+            	<img src="${pageContext.request.contextPath}/images/AboutPic.jpeg"/>
            	</div>
             <div class="col-8">
                 <p><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet blandit eros.

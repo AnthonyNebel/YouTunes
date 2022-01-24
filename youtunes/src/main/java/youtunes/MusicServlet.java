@@ -11,7 +11,7 @@ import java.io.IOException;
 /**
  * Servlet implementation class MusicServlet
  */
-@WebServlet(name = "MusicServlet", urlPatterns= {"/", "/page/"})
+@WebServlet(name = "MusicServlet", urlPatterns= {"/youtunes/*"})
 public class MusicServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -38,6 +38,7 @@ public class MusicServlet extends HttpServlet {
 		String base = "/jsp/";
 		String url = base + "index.jsp";
 		String action = request.getParameter("action");
+		
 		
 		if (action != null) {
 			

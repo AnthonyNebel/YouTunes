@@ -129,9 +129,6 @@ public class MusicServlet extends HttpServlet {
 		
 		JdbcArtistDao artistDao = new JdbcArtistDao(); 
 		artistDao.update(artistToUpdate);
-		
-		System.out.println("ArtistId: " + artistId + "; First name: " + firstName + "; Last name: " + lastName);
-		System.out.println("Updated artist: " + artistId);
 	}
 	private void deleteArtist(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -139,8 +136,6 @@ public class MusicServlet extends HttpServlet {
 		
 		JdbcArtistDao artistDao = new JdbcArtistDao();
 		artistDao.remove(Long.parseLong(artistId));
-		
-		System.out.println("Removed artist: " + artistId);
 	}
 	private void createArtist(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -149,8 +144,6 @@ public class MusicServlet extends HttpServlet {
 		
 		JdbcArtistDao artistDao = new JdbcArtistDao(); 
 		artistDao.add(new Artist(firstName, lastName));
-		
-		System.out.println("Added artist: {first_name='" + firstName + "';last_name='" + lastName + "'}");
 	}
 	private void createAlbum(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -169,9 +162,6 @@ public class MusicServlet extends HttpServlet {
 		
 		JdbcAlbumDao albumDao = new JdbcAlbumDao(); 
 		albumDao.add(newAlbum);
-		
-		System.out.println(newAlbum.toString());
-		// System.out.println(String.format("Album{title=%s, price=%s, genre=%s, artistId=%s}", title, price, genre, artistId));
 	}
 	private void updateAlbum(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -190,12 +180,8 @@ public class MusicServlet extends HttpServlet {
 		updatedAlbum.setImgUrl(imgUrl);
 		updatedAlbum.setArtistId(Long.parseLong(artistId));
 		
-		System.out.println(imgUrl);
-		
 		JdbcAlbumDao albumDao = new JdbcAlbumDao(); 
 		albumDao.update(updatedAlbum);
-		
-		System.out.println(updatedAlbum.toString());
 	}
 	private void deleteAlbum(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException  {
 		
@@ -203,7 +189,5 @@ public class MusicServlet extends HttpServlet {
 		
 		JdbcAlbumDao albumDao = new JdbcAlbumDao(); 
 		albumDao.remove(Long.parseLong(albumId));
-				
-		System.out.println("Removed album: " + albumId);
 	}
 }

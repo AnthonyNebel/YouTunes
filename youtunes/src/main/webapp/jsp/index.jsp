@@ -21,7 +21,7 @@
 	<jsp:include page="TopNav.jsp" flush="true"/>
     <div class="container" id="index-welcome">
         <h1>Welcome to YouTunes!</h1>
-        <p>${pageContext.request.contextPath} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium eros erat, eu euismod erat
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium eros erat, eu euismod erat
         feugiat nec. Pellentesque pulvinar enim vel nulla congue semper. Pellentesque volutpat sem ac lacus ullamcorper, 
         et sagittis magna egestas. Nam blandit eros purus, id dictum orci malesuada ac. Quisque aliquet pretium odio, ut 
         faucibus ipsum venenatis in. Sed laoreet massa sapien, vitae condimentum lacus eleifend vel. Curabitur vulputate 
@@ -44,7 +44,11 @@
                         <small class="text-muted"><em><%=album.getGenre()%></em></small>
                     </p>
                     <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group"><a href="store?action=albumDetails&amp;albumId=<%=album.getAlbumId()%>&quot; class=&quot;btn btn-sm btn-outline-secondary&quot;">Edit</a><a href="store?action=deleteAlbum&amp;albumId=<%=album.getAlbumId()%>&quot; class=&quot;btn btn-sm btn-outline-secondary&quot;">Delete</a></div><small class="text-muted"><%=album.getPrice()%></small>
+                        <div class="btn-group">
+                        	<a href="youtunes?action=albumDetails&albumId=<%=album.getAlbumId()%>" class="btn btn-sm btn-outline-secondary">Edit</a>
+                        	<a href="youtunes?action=deleteAlbum&albumId=<%=album.getAlbumId()%>" class="btn btn-sm btn-outline-secondary">&emsp;Delete</a>
+                       	</div>
+                       	<small class="text-muted"><%=album.getPrice()%></small>
                     </div>
                 </div>
             </div>

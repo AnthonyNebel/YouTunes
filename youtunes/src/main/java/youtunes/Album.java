@@ -76,12 +76,14 @@ public class Album {
 	public long getArtistId() {
 		return artistId;
 	}
+	/*
 	@Override
 	public String toString() {
 		
 		return String.format("Album{albumId=%s, title=%s, price=%s, genre=%s, imgUrl=%s, artistId=%s}", 
 				albumId, title, price, genre, imgUrl, artistId);
 	}
+	*/
 }
 
 

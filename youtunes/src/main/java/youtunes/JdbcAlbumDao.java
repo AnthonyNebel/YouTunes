@@ -171,7 +171,6 @@ public class JdbcAlbumDao implements AlbumDao {
 				Statement statement = connection.createStatement(); 
 				
 				String sql = String.format("DELETE FROM album WHERE album_id = %s", key);
-				//System.out.println(sql);
 				
 				try  {
 					

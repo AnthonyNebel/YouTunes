@@ -14,7 +14,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>BSYouTunes</title>
+    <title>Album Details</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="stylesheet" href="../assets/css/Footer-Basic.css">
@@ -24,7 +24,6 @@
 	<jsp:include page="../TopNav.jsp" flush="true"/>
     <div class="container py-5 width-50">
     	<% 
-    		System.out.println("this is album/Details");
 			try {
 				
 				String albumId = request.getParameter("albumId");
@@ -85,5 +84,6 @@
     </div>
     <jsp:include page="../Footer.jsp" flush="true"/>
     <jsp:include page="../ScriptFooter.jsp" flush="true"/>
+    <%System.out.println("albumDetailsPage"); %>
 </body>
 </html>

@@ -30,7 +30,6 @@ public class JdbcArtistDao implements ArtistDao {
 				
 				Statement statement = connection.createStatement();
 				String sql = "INSERT INTO artist(last_name, first_name) VALUES('" + newArtist.getLastName() + "', '" + newArtist.getFirstName() + "')";
-				//System.out.println("add artist sql");
 				
 				try {
 					
@@ -43,7 +42,6 @@ public class JdbcArtistDao implements ArtistDao {
 			}
 			catch (SQLException e) {
 				
-				System.out.println("Did not insert newArtist: {firstName=" + newArtist.getFirstName() + ";lastName=" + newArtist.getLastName() + "}");
 				System.out.println(e.getMessage());
 			}
 		}
@@ -88,7 +86,7 @@ public class JdbcArtistDao implements ArtistDao {
 			}
 			catch (SQLException e) {
 				
-				System.out.println("Could not get artist: " + e.getMessage());
+				System.out.println(e.getMessage());
 			}
 			finally {
 				
@@ -133,7 +131,7 @@ public class JdbcArtistDao implements ArtistDao {
 			}
 			catch (SQLException e) {
 				
-				System.out.println("Could not find artist" + e.getMessage());
+				System.out.println(e.getMessage());
 			}
 		}
 		return artist;
@@ -149,7 +147,6 @@ public class JdbcArtistDao implements ArtistDao {
 				Statement statement = connection.createStatement();
 				String sql = "UPDATE artist SET first_name = '" + entity.getFirstName() + "', last_name = '" 
 							+ entity.getLastName() + "' WHERE artist_id = " + entity.getArtistId();
-				//System.out.println(sql);
 				
 				try {
 					
@@ -164,7 +161,7 @@ public class JdbcArtistDao implements ArtistDao {
 			}
 			catch(SQLException e) {
 				
-				System.out.println("Did not update artist");
+				System.out.println(e.getMessage());
 			}
 		}
 	}
@@ -179,7 +176,6 @@ public class JdbcArtistDao implements ArtistDao {
 				
 				Statement statement = connection.createStatement();
 				String sql = "DELETE FROM artist WHERE artist_id = " + key;
-				//System.out.println(sql);
 				
 				try {
 					
@@ -192,7 +188,7 @@ public class JdbcArtistDao implements ArtistDao {
 			}
 			catch (SQLException e) {
 				
-				System.out.println("did not remove artist: " + e.getMessage());
+				System.out.println(e.getMessage());
 			}
 		}
 	}

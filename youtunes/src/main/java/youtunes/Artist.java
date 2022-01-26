@@ -45,15 +45,4 @@ public class Artist {
 		
 		return String.format("Artist{artistId=%s, lastName=%s, firstName=%s}", artistId, lastName, firstName);
 	}
-	
-	//Album fields: ablume_id (primary key), title, price, genre, img_url, and artist_id (foreign key).
-	
 }
-/**
-private long albumId; 
-private String title; 
-private double price; 
-private String genre; 
-private String imgUrl; 
-private long artistId;
-*/

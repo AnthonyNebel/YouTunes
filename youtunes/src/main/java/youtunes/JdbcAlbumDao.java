@@ -27,7 +27,6 @@ public class JdbcAlbumDao implements AlbumDao {
 				Statement statement = connection.createStatement();
 				String sql = String.format("INSERT INTO album(title, price, genre, img_url, artist_id) values('%s', %s, '%s', '%s', %s);", 
 						newAlbum.getTitle(), newAlbum.getPrice(), newAlbum.getGenre(), newAlbum.getImgUrl(), newAlbum.getArtistId());
-				//System.out.println(sql);
 				try {
 					
 					statement.executeUpdate(sql);
@@ -39,7 +38,6 @@ public class JdbcAlbumDao implements AlbumDao {
 			}
 			catch (SQLException e) {
 				
-				System.out.println("did not insert new album " + newAlbum.toString());
 				System.out.println(e.getMessage());
 			}
 		}
@@ -55,7 +53,6 @@ public class JdbcAlbumDao implements AlbumDao {
 				
 				Statement statement = connection.createStatement();
 				String sql = "SELECT album_id, title, price, img_url, genre FROM album";
-				//System.out.println(sql);
 				try {
 					
 					ResultSet resultSet = statement.executeQuery(sql);
@@ -84,7 +81,7 @@ public class JdbcAlbumDao implements AlbumDao {
 			}
 			catch (SQLException e) {
 				
-				System.out.println("did not get albums " + e.getMessage());
+				System.out.println(e.getMessage());
 			}
 			finally {
 				
@@ -105,7 +102,6 @@ public class JdbcAlbumDao implements AlbumDao {
 				Statement statement = connection.createStatement(); 
 				
 				String sql = "SELECT album_id, title, price, img_url, genre, artist_id FROM album WHERE album_id = " + key;
-				//System.out.println(sql);
 				
 				try {
 					ResultSet resultSet = statement.executeQuery(sql);
@@ -126,7 +122,7 @@ public class JdbcAlbumDao implements AlbumDao {
 				
 			}
 			catch (SQLException e) {
-				System.out.println("Could not get album: " + e.getMessage());
+				System.out.println(e.getMessage());
 			}
 		}
 		return album;
@@ -144,8 +140,6 @@ public class JdbcAlbumDao implements AlbumDao {
 						updatedAlbum.getTitle(), updatedAlbum.getPrice(), updatedAlbum.getGenre(),
 						updatedAlbum.getImgUrl(), updatedAlbum.getArtistId(), updatedAlbum.getAlbumId());
 				
-				//System.out.println(sql);
-				
 				try {
 					statement.executeUpdate(sql);
 				} 
@@ -154,7 +148,6 @@ public class JdbcAlbumDao implements AlbumDao {
 				}
 			}
 			catch (SQLException e) {
-				System.out.println("did not update album: " + updatedAlbum.toString());
 				System.out.println(e.getMessage());
 			}
 		}
@@ -182,7 +175,6 @@ public class JdbcAlbumDao implements AlbumDao {
 			} 
 			catch (SQLException e) {
 				
-				System.out.println("did not delete ablum: " + key);
 				System.out.println(e.getMessage());
 			}
 		}

@@ -26,6 +26,8 @@
         et sagittis magna egestas. Nam blandit eros purus, id dictum orci malesuada ac. Quisque aliquet pretium odio, ut 
         faucibus ipsum venenatis in. Sed laoreet massa sapien, vitae condimentum lacus eleifend vel. Curabitur vulputate 
         blandit risus in lacinia. Duis facilisis vitae mi id sodales. Quisque pulvinar eget ex at blandit.<br></p>
+        <p>
+        	<a href="youtunes?action=newAlbum" class="btn btn-primary my-2">Add New Album</a>
     </div>
     <div class="py-5 bg-light">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -55,6 +57,7 @@
             <% } %>
         </div>
     </div>
+    <%System.out.println("index.jsp"); %>
     <jsp:include page="Footer.jsp" flush="true"/>
     <jsp:include page="ScriptFooter.jsp" flush="true"/>
 </body>

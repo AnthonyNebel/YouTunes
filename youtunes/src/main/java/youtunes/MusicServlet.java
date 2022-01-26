@@ -139,8 +139,8 @@ public class MusicServlet extends HttpServlet {
 	}
 	private void createArtist(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String firstName = request.getParameter("firstName");
-		String lastName = request.getParameter("lastName");
+		String firstName = request.getParameter("lastName");
+		String lastName = request.getParameter("firstName");
 		
 		JdbcArtistDao artistDao = new JdbcArtistDao(); 
 		artistDao.add(new Artist(firstName, lastName));

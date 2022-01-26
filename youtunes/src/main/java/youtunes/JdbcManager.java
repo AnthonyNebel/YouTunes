@@ -13,7 +13,7 @@ public class JdbcManager {
 	public JdbcManager() {
 		
 		jdbcUrl = "jdbc:mysql://localhost:3306/youtunes?useSSL=false";
-		jdbcUserName = "root";
+		jdbcUserName = "youtunes_user";
 		jdbcPassword = "root";
 		
 		try {
@@ -29,14 +29,13 @@ public class JdbcManager {
 	public Connection getConnection() {
 		
 		Connection connection = null;
-		//System.out.println("jdbcUrl: " + jdbcUrl + "; jdbcUserName: " + jdbcUserName + "; jdbcPassword: " + jdbcPassword);
 		try {
 			
 			connection = DriverManager.getConnection(jdbcUrl, jdbcUserName, jdbcPassword);
 		}
 		catch (SQLException e) {
 			
-			System.out.println("Could not connect to DB: " + e.getMessage());
+			System.out.println(e.getMessage());
 		}
 		return connection;
 	}
@@ -50,7 +49,7 @@ public class JdbcManager {
 			}
 			catch (SQLException e) {
 				
-				System.out.println("Could not close connection: " + e.getMessage());
+				System.out.println(e.getMessage());
 			}
 		}
 	}

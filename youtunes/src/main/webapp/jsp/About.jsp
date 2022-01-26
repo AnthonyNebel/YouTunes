@@ -35,6 +35,7 @@
             </div>
         </div>
     </div>
+    <%System.out.println("aboutPage");%>
     <jsp:include page="Footer.jsp" flush="true"/>
     <jsp:include page="ScriptFooter.jsp" flush="true"/>
 </body>

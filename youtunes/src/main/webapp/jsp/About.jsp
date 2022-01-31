@@ -25,13 +25,11 @@
             	<img src="${pageContext.request.contextPath}/images/AboutPic.jpeg"/>
            	</div>
             <div class="col-8">
-                <p><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet blandit eros.
-                Vestibulum hendrerit aliquet odio sit amet ornare. Praesent commodo velit magna. Quisque volutpat
-                sapien vitae purus ullamcorper euismod. Vivamus quis leo non neque sagittis fringilla. Proin feugiat,
-                ante eu tincidunt dapibus, felis lorem feugiat est, vitae vestibulum ligula velit in velit. In hac
-                habitasse platea dictumst. Aenean iaculis mattis molestie. Etiam viverra, metus tristique sodales
-                mattis, dui arcu eleifend dolor, id volutpat eros mauris ut urna. Ut et diam in nunc tristique dictum
-                eget auctor dolor. Maecenas sodales augue leo, id tristique magna viverra ut.<br><br></p>
+                <p><br>We are dedicated to providing the world the newest hot music for everyone to discover and enjoy.
+                YouTunes began with a mission to give artists the freedom to release their own music on their terms. The
+                result? A multi-platform web application that delivers artist's owned music to their fans without the
+                drama of record contracts or ownership disputes. Our service lets artists deliver their music directly
+                to you. Discover your favorite music. Thank you for your support!<br><br></p>
             </div>
         </div>
     </div>

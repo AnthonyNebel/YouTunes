@@ -21,11 +21,9 @@
 	<jsp:include page="TopNav.jsp" flush="true"/>
     <div class="container" id="index-welcome">
         <h1>Welcome to YouTunes!</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium eros erat, eu euismod erat
-        feugiat nec. Pellentesque pulvinar enim vel nulla congue semper. Pellentesque volutpat sem ac lacus ullamcorper, 
-        et sagittis magna egestas. Nam blandit eros purus, id dictum orci malesuada ac. Quisque aliquet pretium odio, ut 
-        faucibus ipsum venenatis in. Sed laoreet massa sapien, vitae condimentum lacus eleifend vel. Curabitur vulputate 
-        blandit risus in lacinia. Duis facilisis vitae mi id sodales. Quisque pulvinar eget ex at blandit.<br></p>
+        <p>Welcome to the YouTunes music discovery site where you can browse through new artists music and albums. We will
+        provide you newest music out there for you to discover and share with your friends. If you do not see
+        the artists that you like, you add them here. Thanks for using YouTunes! Enjoy! <br></p>
         <p>
         	<a href="youtunes?action=newAlbum" class="btn btn-primary my-2">Add New Album</a>
     </div>
